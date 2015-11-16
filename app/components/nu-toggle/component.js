@@ -1,9 +1,7 @@
 import Ember from 'ember';
 
-export default Ember.Component.extend({
-  actions: {
-    toggle() {
-      this.EventBus.publish('toggle_' + this.get('toggle_id'));
-    }
+export default Ember.GlimmerComponent.extend({
+  click() {
+    this.EventBus.publish('toggle_' + this.attrs.toggle_id);
   }
 });

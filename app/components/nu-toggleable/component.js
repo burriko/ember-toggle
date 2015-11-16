@@ -1,10 +1,10 @@
 import Ember from 'ember';
 
-export default Ember.Component.extend({
+export default Ember.GlimmerComponent.extend({
   toggled: true,
 
   didInsertElement() {
-    this.EventBus.subscribe('toggle_' + this.get('toggle_id'), this, 'toggle');
+    this.EventBus.subscribe('toggle_' + this.attrs.toggle_id, this, 'toggle');
   },
 
   toggle() {
